@@ -1,14 +1,28 @@
 {
-  "name": "note-taker",
+  "name": "note-taking-server",
   "version": "1.0.0",
-  "description": "",
+  "description": "A server and interface to save notes",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "clear && node server.js",
+    "dev": "clear && npx nodemon server.js",
+    "test": "jest"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "pbp66",
+  "license": "MIT",
   "dependencies": {
     "express": "^4.16.4"
-  }
+  },
+  "devDependencies": {
+    "jest": "^29.3.1",
+    "nodemon": "^2.0.20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pbp66/note-taking-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pbp66/note-taking-server/issues"
+  },
+  "homepage": "https://github.com/pbp66/note-taking-server#readme"
 }
