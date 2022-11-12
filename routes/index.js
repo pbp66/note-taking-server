@@ -1,7 +1,12 @@
-import { Router as router} from "express"
-import api from "./api.js";
-import logger from '../middleware/logger.js'
+import { Router } from 'express';
+import api from './api.js';
+import views from './views.js';
+import logger from '../middleware/logger.js';
 
-router.use('/api', logger, api);
+const router = Router();
+
+router
+    .use('/api', logger, api)
+    .use(logger, views);
 
 export default router;
