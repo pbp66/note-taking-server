@@ -1,8 +1,9 @@
 {
   "name": "note-taking-server",
   "version": "1.0.0",
-  "description": "A server and interface to save notes",
+  "description": "A server and interface to save and take notes",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "start": "clear && node server.js",
     "dev": "clear && npx nodemon server.js",
