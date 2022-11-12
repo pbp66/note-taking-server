@@ -7,6 +7,6 @@ const router = Router();
 
 router
     .use('/api', logger, api)
-    .use(logger, views);
+    .use(views);
 
 export default router;
