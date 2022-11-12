@@ -12,6 +12,7 @@
   "author": "pbp66",
   "license": "MIT",
   "dependencies": {
+    "chalk": "^5.1.2",
     "express": "^4.16.4"
   },
   "devDependencies": {
