@@ -11,24 +11,20 @@ router
     .get('/notes', async (req, res) => {
         // Check if notes array is loaded. Load it if it isn't
         if (notes.length === 0) {
-            console.log("Loadings notes from file...");
-            await fs.readFile(dbPath, 'utf-8', function (err, data) {
-                if (err) {
-                    res.status(500).json(err);
-                    return;
-                }
-                console.log(`Data: ${data}`);
+            try {
+                const data = await fs.readFile(dbPath, 'utf-8');
                 const json = JSON.parse(data);
-                console.log(`JSON: ${json}`);
                 notes = json.map(element => {
                     const tempNode = new Note(element.title, element.text)
                     tempNode.setID(element.id);
                     return tempNode;
                 });
-            });
+            } catch (err) {
+                res.status(500).json(err);
+                return;
+            }
         }
-        console.log(notes);
-        res.json(JSON.stringify(notes));
+        res.json(notes);
     })
     .post('/notes', async (req, res) => {
         const { title, text } = req.body;
