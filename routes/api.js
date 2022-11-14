@@ -29,8 +29,8 @@ router
     .post('/notes', async (req, res) => {
         const { title, text } = req.body;
         notes.push(new Note(title, text));
-        await fs.writeFile(dbPath, JSON.stringify(notes), {flag: "w"});
         res.json(notes);
+        await fs.writeFile(dbPath, JSON.stringify(notes), {flag: "w"});
     })
 
     .delete('/notes', (req, res) => {
