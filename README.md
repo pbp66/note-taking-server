@@ -24,7 +24,14 @@ From the command line, run `npm start`. This will start the server backend. In t
 
 If you wish to deploy this to Heroku, follow the installation instructions above, then follow this [heroku installation and deployment guide.](https://devcenter.heroku.com/articles/getting-started-with-nodejs?singlepage=true)
 
-Once on the application, 
+When loading the application you will be presented with the launch screen.
+![Web-Based Note Taker Launch Page](./assets/readme/11-express-homework-demo-00.png)
+
+Clicking on the get started button will take you to the application. If it's your first time visiting the site, it'll be empty except for a field to write a new note. If you have saved previous notes, your webpage will look like the images below.
+![Web-Based Note Taker Demo #1](./assets/readme/11-express-homework-demo-01.png)
+![Web-Based Note Taker Demo #2](./assets/readme/11-express-homework-demo-02.png)
+
+Clicking the plus icon in the upper-right-hand corner of the web page will clear the note title and note text for you to write a new note. Once you've written some text in both the title and text, a save icon will appear. Clicking the save icon will save the note onto the server and add it to the entries in the left hand column. If you wish to view a previous note, click on the note in the left hand column. It'll display the title and its content in the larger pane to the right. If you no longer need a note, click on the red trashcan icon. It'll delete the note from the list and from the server. WARNING: If you delete a note, it cannot be recovered. 
 
 ## License
 
@@ -46,7 +53,7 @@ Before contributing, be sure to read the GitHub [Code of Conduct](https://github
 
 ## Tests
 
-No Tests Provided
+No Tests Provided.
 
 ## Questions
 
