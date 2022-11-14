@@ -30,6 +30,7 @@ router
         const { title, text } = req.body;
         notes.push(new Note(title, text));
         await fs.writeFile(dbPath, JSON.stringify(notes), {flag: "w"});
+        res.json(notes);
     })
 
     .delete('/notes', (req, res) => {
