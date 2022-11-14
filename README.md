@@ -2,7 +2,21 @@
 
 ## Description
 
-Uses nodejs and express.js to host a web-based note taking application
+Uses nodejs and express.js to host a web-based note taking application. A simple json file acts as a database for the notes. You can save notes, view notes, and delete notes. The underlying framework uses GET, POST, and DELETE requests to handle the modification of the notes.
+
+User Story:
+As a small business owner, I want to be able to write and save notes, so that I can organize my thoughts and keep track of tasks I need to complete.
+
+Acceptance Criteria: Given a note-taking application
+
+1. When I open the Note Taker, then I am presented with a landing page with a link to a notes page.
+2. When I click on the link to the notes page, then I am presented with a page with existing notes listed in the left-hand column, plus empty fields to enter a new note title and the note’s text in the right-hand column.
+3. When I enter a new note title and the note's text, then a Save icon appears in the navigation at the top of the page.
+4. When I click on the Save icon, then the new note I have entered is saved and appears in the left-hand column with the other existing notes.
+5. When I click on an existing note in the list in the left-hand column, then that note appears in the right-hand column.
+6. When I click on the Write icon in the navigation at the top of the page, then I am presented with empty fields to enter a new note title and the note’s text in the right-hand column.
+
+Building this application allowed me to experiment with simple GET, POST, and DELETE requests. Using express.js and its router class was helpful in structuring the code into a sensible and readable structure.
 
 ## Table of Contents
 
@@ -12,7 +26,6 @@ Uses nodejs and express.js to host a web-based note taking application
 4. [Contribute](#contribute)
 5. [Tests](#tests)
 6. [Questions](#questions)
-
 
 ## Installation
 
@@ -31,7 +44,7 @@ Clicking on the get started button will take you to the application. If it's you
 ![Web-Based Note Taker Demo #1](./assets/readme/11-express-homework-demo-01.png)
 ![Web-Based Note Taker Demo #2](./assets/readme/11-express-homework-demo-02.png)
 
-Clicking the plus icon in the upper-right-hand corner of the web page will clear the note title and note text for you to write a new note. Once you've written some text in both the title and text, a save icon will appear. Clicking the save icon will save the note onto the server and add it to the entries in the left hand column. If you wish to view a previous note, click on the note in the left hand column. It'll display the title and its content in the larger pane to the right. If you no longer need a note, click on the red trashcan icon. It'll delete the note from the list and from the server. WARNING: If you delete a note, it cannot be recovered. 
+Clicking the plus icon in the upper-right-hand corner of the web page will clear the note title and note text for you to write a new note. Once you've written some text in both the title and text, a save icon will appear. Clicking the save icon will save the note onto the server and add it to the entries in the left hand column. If you wish to view a previous note, click on the note in the left hand column. It'll display the title and its content in the larger pane to the right. If you no longer need a note, click on the red trashcan icon. It'll delete the note from the list and from the server. WARNING: If you delete a note, it cannot be recovered.
 
 ## License
 
@@ -63,4 +76,3 @@ For any questions, you may contact pbp66 via email: perryjames00@gmail.com. Plea
 - Subject: Repository - Question/Issue
 - Body: Summarize the issue with a brief description for the first paragraph. Additional paragraphs can be used for a long description, if needed. Include any errors when using this project
 - Signature: Please leave an email address so that any updates are sent get back to you.
-
