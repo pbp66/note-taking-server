@@ -33,9 +33,12 @@ router
         await fs.writeFile(dbPath, JSON.stringify(notes), {flag: "w"});
     })
 
-    .delete('/notes', (req, res) => {
-        // Add new note to db.json
-        console.log("API Route: DELETE /notes");
+    .delete('/notes/:id', async (req, res) => {
+        const id = req.params.id;
+        const filteredNotes = notes.filter(element => element.id !== id);
+        res.json(filteredNotes);
+        notes = filteredNotes;
+        await fs.writeFile(dbPath, JSON.stringify(filteredNotes), {flag: "w"});
     })
 
 export default router;
