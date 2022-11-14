@@ -5,9 +5,10 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "start": "clear && node server.js",
+    "start": "node server.js",
+    "dev-start": "clear && node server.js",
     "dev": "clear && npx nodemon server.js",
-    "test": "jest"
+    "test": "clear && jest"
   },
   "author": "pbp66",
   "license": "MIT",
